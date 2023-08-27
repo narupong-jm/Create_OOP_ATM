@@ -31,3 +31,24 @@ class ATM:
     def loan(self,amount):
         self.balance += amount
         print(f"You loan {amount} baht, your balance is {self.balance}.")
+
+atm1 = ATM("shoppee", "VISA", "1234-5678-4321-9876", "2023-09", "555", "Johnny_fun", 5000)
+
+info = f"""
+    Card name: {atm1.name} \n
+    Card Type: {atm1.typeCard} \n
+    Card No: {atm1.cardNo} \n
+    Username: {atm1.username} \n
+    balance: {atm1.balance}
+    """
+print(info)
+
+atm1.deposit(500)
+
+atm1.withdraw(500)
+
+atm1.transfer(1000, "7654-1234-5633-0987")
+
+atm1.loan(1000)
+
+atm1.requestOTP("099-999-9999")
